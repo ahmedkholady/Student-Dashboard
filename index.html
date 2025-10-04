@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>workshop</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <style>
+           html,
+           body {
+
+                height: 100%;
+                margin: 0;
+                
+            }
+
+            body {
+                background: linear-gradient(to right , #f8f9f9 , #efedef);
+                font-family: 'cairo';
+            }
+
+            .btn {
+                border-radius: 20px;
+                padding: 8px 20px;
+                font-weight: 600;
+            }
+
+            main{
+                flex: 1;
+            }
+
+            form,
+            table {
+                background-color: #ffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px rgba(0, 0 , 0 , 0.1);
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-md">
+                <a href="#" class="navbar-brand">Student Dashboard</a>
+                <button type="button" class="navbar-togller"
+                    data-bs-toggle="collapse" data-bs-target="#navmenu"
+                    aria-controls="navmenu" aria-expanded="false"
+                    aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="#" class="nav-link
+                                active">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link
+                                ">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle"
+                                role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">students</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">Services</a></li>
+                                <li><a href="#" class="dropdown-item">Projects</a></li>
+                                <li><a href="#" class="dropdown-item">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container my-5">
+            <h2>Add Student</h2>
+            <form id="studentform" class="row mt-2 g-3">
+                <div class="col-4 "><input type="text" id="name"
+                        class="form-control" placeholder="Please Enter Student Name"></div>
+                <div class="col-4 "><input type="number" id="age"
+                        class="form-control" placeholder="Please Enter Age"></div>
+                <div class="col-4 "><input type="text" id="course"
+                        class="form-control" placeholder="Please Enter Course Name"></div>
+                <button class="btn btn-primary">Add Student</button>
+            </form>
+            <hr>
+            <h2>Student List (<span id="count">0</span>)</h2>
+            <input type="text" id="search" class="form-control mb-3 w-50"
+                placeholder="Search by Name or Course">
+            <table class="table table-bordered" id="table">
+                <thead>table.tr
+                    <tr>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Age</th>
+                        <th class="text-center">Course</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentlist"></tbody>
+            </table>
+            <hr>
+            <button class="btn btn-danger" onclick="clearAll()">clear All Students</button>
+            <button class="btn btn-warning" id="prompt">Example Prompt</button>
+            <button class="btn btn-info" onclick="reloadpage()">Reload Page</button>
+        </main>
+
+        <footer>
+            <div class="bg-light text-dark text-center p-3">
+                <p class="mb-0">Copyright &copy; 2025 Student Dashboard. All
+                    rights reserved</p>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+            integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
